@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="about-section center-row">
+    <!-- About Section -->
+            <div class="about-image-container center-row">
+                <img src="{% static '/img/portfolio-pic.png' %}" alt="Damian Savage">
+            </div>
+
+            <div class="contact">
+                <img src="{% static './img/mdi_linkedin.png' %}" alt="" style="width: 40px;" onclick="window.open('https://www.linkedin.com/in/damian-savage')">
+                <img src="{% static './img/mdi_github.png' %}" alt="" style="width: 40px;"onclick="window.open('https://www.github.com/dsavage13')">
+                <img src="{% static './img/ic_baseline-email.png' %}" alt="" style="width: 40px;" onclick="window.open('mailto:savagedamian99@gmail.com')">
+            </div>
+
+            <div class="about-section center-column" id="about">
+                <div class="about-description-container center-column">
+                    <h1>HI! MY NAME IS DAMIAN SAVAGE</h1>
+                    <h2>Junior Software Developer</h2>
+                    <p>Junior Software Developer with 3 years of diverse experience in IT, sales, and software development, showcasing strong proficiency in React and Python. Leveraging a solid foundation in CRM and automotive sales, complemented by leadership skills from a Marine Corps background, to drive innovation and efficiency in technical projects. Committed to continuous learning and growth, currently enhancing expertise through a comprehensive Full Stack Development course.</p>
+                    <p>My goal is to leverage my unique blend of skills and experiences to contribute to innovative projects and drive success in a dynamic team environment.</p>
+                </div>
+            </div>
+    </section>
+    <section class="skills-section center-column">
+    <!-- Skills Section -->
+        <h2>Skills / Languages</h2>
+        <div class="skills-list ">
+                <label class="text-label">HTML</label>
+                <label class="text-label">CSS</label>
+                <label class="text-label">JavaScript</label>
+                <label class="text-label">Python</label>
+                <label class="text-label">React</label>
+                <label class="text-label">Flask</label>
+                <label class="text-label">Agile/SCRUM</label>
+                <label class="text-label">SQLite</label>
+                <label class="text-label">Git & GitHUB</label>
+                <label class="text-label">Node.Js</label>
+        </div>
+    </section>
+
+{% endblock content %}

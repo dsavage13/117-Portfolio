@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <section class="project-list center-column">
+        <!-- Projects Section -->
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I have worked on. Click on the View Project link to view more details.</p>
+        <div class="project-section">
+            <div class="project-container">
+                <div class="project-image-container">
+                    <img src="{% static '/img/portfolio-pic.png' %}" alt="Project Image">
+                </div>
+                <div class="project-description-container">
+                    <h2>Project Title</h2>
+                    <p>Project description goes here. This is a brief overview of the project, its purpose, and technologies used.</p>
+                    <a href="#" class="project-link">View Project</a>
+                    <br>
+                    <h3>Technologies Used:</h3>
+                    <br>
+                    <label class="text-label">HTML</label>
+                    <label class="text-label">CSS</label>
+                    <label class="text-label">CSS</label>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-image-container">
+                    <img src="{% static '/img/portfolio-pic.png' %}" alt="Project Image">
+                </div>
+                <div class="project-description-container">
+                    <h2>Project Title</h2>
+                    <p>Project description goes here. This is a brief overview of the project, its purpose, and technologies used.</p>
+                    <a href="#" class="project-link">View Project</a>
+                    <br>
+                    <h3>Technologies Used:</h3>
+                    <br>
+                    <label class="text-label">HTML</label>
+                    <label class="text-label">CSS</label>
+                    <label class="text-label">CSS</label>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-image-container">
+                    <img src="{% static '/img/portfolio-pic.png' %}" alt="Project Image">
+                </div>
+                <div class="project-description-container">
+                    <h2>Project Title</h2>
+                    <p>Project description goes here. This is a brief overview of the project, its purpose, and technologies used.</p>
+                    <a href="#" class="project-link">View Project</a>
+                    <br>
+                    <h3>Technologies Used:</h3>
+                    <br>
+                    <label class="text-label">HTML</label>
+                    <label class="text-label">CSS</label>
+                    <label class="text-label">CSS</label>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
