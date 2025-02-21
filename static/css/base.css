@@ -141,17 +141,3 @@ p{
 .project-list{
     margin-top: 20px;
 }
-
-@media (max-width: 640px) {
-    .project-container {
-        width: 100%;
-        margin: 16px 0;
-    }
-}
-
-@media (max-width: 1007px) {
-    .project-container {
-        width: 40%;
-        margin: 16px 2.5%;
-    }
-}
