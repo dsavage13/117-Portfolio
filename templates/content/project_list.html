@@ -4,57 +4,80 @@
 {% block content %}
     <section class="project-list center-column">
         <!-- Projects Section -->
-        <h2>My Projects</h2>
-        <p>Here are some of the projects I have worked on. Click on the View Project link to view more details.</p>
+        <h2>Recent Projects</h2>
+        <p>Here are some of the recent projects that I have enjoyed creating. Click on each project to view more details.</p>
         <div class="project-section">
+            {% for project in projects %}
             <div class="project-container">
+                <a href="{{project.repository}}" class="project-link" target="_blank"> 
+                    <div class="project-image-container">
+                        <img src="{{project.image.url}}" alt="Project Image">
+                    </div>
+                    <div class="project-description-container">
+                        <h2>{{project.title}}</h2>
+                        <p>{{project.description}}</p>
+                        <br>
+                        <h3>Technologies Used:</h3>
+                        <div class="label-container">
+                            {% for skill in project.skill.all %}
+                            <label class="text-label">{{skill.name}}</label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+            <!-- <div class="project-container">        *** These are example hard coded projects ***
                 <div class="project-image-container">
-                    <img src="{% static '/img/portfolio-pic.png' %}" alt="Project Image">
+                    <img src="{% static '/img/online-store.png' %}" alt="Project Image">
                 </div>
                 <div class="project-description-container">
-                    <h2>Project Title</h2>
-                    <p>Project description goes here. This is a brief overview of the project, its purpose, and technologies used.</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <h2>Online-Store</h2>
+                    <p>This is a personal online store project I created. It features UI/UX, front-end design, and backend database use with a catalog, and cart.</p>
+                    <a href="{{project.repository}}" class="project-link">View Project</a>
                     <br>
                     <h3>Technologies Used:</h3>
-                    <br>
-                    <label class="text-label">HTML</label>
-                    <label class="text-label">CSS</label>
-                    <label class="text-label">CSS</label>
+                    <div class="label-container">
+                        <label class="text-label">React</label>
+                        <label class="text-label">SQLite</label>
+                        <label class="text-label">CSS</label>
+                    </div>
                 </div>
             </div>
             <div class="project-container">
                 <div class="project-image-container">
-                    <img src="{% static '/img/portfolio-pic.png' %}" alt="Project Image">
+                    <img src="{% static '/img/pet-salon.png' %}" alt="Project Image">
                 </div>
                 <div class="project-description-container">
-                    <h2>Project Title</h2>
-                    <p>Project description goes here. This is a brief overview of the project, its purpose, and technologies used.</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <h2>Pet Salon Project</h2>
+                    <p>Sample pet salon site featuring UX, and front end design, and a live registry.</p>
+                    <a href="https://github.com/dsavage13/Pet-Salon" class="project-link">View Project</a>
                     <br>
                     <h3>Technologies Used:</h3>
-                    <br>
-                    <label class="text-label">HTML</label>
-                    <label class="text-label">CSS</label>
-                    <label class="text-label">CSS</label>
+                    <div class="label-container">
+                        <label class="text-label">HTML</label>
+                        <label class="text-label">CSS</label>
+                        <label class="text-label">JavaScripot</label>
+                    </div>
                 </div>
             </div>
             <div class="project-container">
                 <div class="project-image-container">
-                    <img src="{% static '/img/portfolio-pic.png' %}" alt="Project Image">
+                    <img src="{% static '/img/blog.png' %}" alt="Project Image">
                 </div>
                 <div class="project-description-container">
-                    <h2>Project Title</h2>
-                    <p>Project description goes here. This is a brief overview of the project, its purpose, and technologies used.</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <h2>Blog Project</h2>
+                    <p>Simple blog website featuring CRUD, and account support.</p>
+                    <a href="https://github.com/dsavage13/Blog" class="project-link">View Project</a>
                     <br>
                     <h3>Technologies Used:</h3>
-                    <br>
-                    <label class="text-label">HTML</label>
-                    <label class="text-label">CSS</label>
-                    <label class="text-label">CSS</label>
+                    <div class="label-container">
+                        <label class="text-label">Django</label>
+                        <label class="text-label">SQLite</label>
+                        <label class="text-label">Python</label>
+                    </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 {% endblock content %}

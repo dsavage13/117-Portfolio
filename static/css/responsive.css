@@ -1,6 +1,6 @@
 /* Tablet */
 
-@media(max-width:1007px){
+@media(min-width:721px) and (max-width:1007px){
     html{
         font-size: 12px;
     }
@@ -21,15 +21,20 @@
     }
     
     .project-container {
-        width: 45%;
+        width: 40%;
         margin: 16px 2.5%;
     }
+
+    .project-image-container img{
+        height: 200px;
+    }
+
 }
 
 
 
 /* Phone */
-@media(max-width:640px){
+@media(max-width:720px){
     html{
         font-size: 10px;
     }
@@ -51,6 +56,16 @@
     .project-container {
         width: 100%;
         margin: 16px 0;
+    }
+
+    .project-description-container label {
+        display: inline-block;
+        margin-top: 8px;
+        margin-right: 4px;
+    }
+
+    .project-image-container img{
+        height: 250px;
     }
 
 
