@@ -24,10 +24,10 @@
 }
 
 html {
-    background-color: var(--background-color);
     font: 14px;
     color: var(--surface-color);
     scroll-behavior: smooth;
+    background-color: var(--background-color);
 }
 
 
@@ -144,4 +144,49 @@ p{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background-color: var(--primary-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    margin: 16px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Adjust the max-width as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container label {
+    margin-bottom: 8px;
+    color: var(--surface-color);
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 500px;
+}
+
+.contact-form-container button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--surface-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form-container button:hover {
+    background-color: darken(var(--secondary-color), 50%);
 }

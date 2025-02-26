@@ -1,0 +1,37 @@
+
+<style>
+    h2 {
+        color: #333;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    div {
+        background-color: #f9f9f9;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        padding: 20px;
+    }
+</style>
+
+<img src="https://cdn-icons-png.flaticon.com/512/115/115757.png" alt="">
+
+<h2>Hey, you have an email from your Portfolio!</h2>
+<div>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Subject:</strong> {{ subject }}</p>
+    <p><strong>Message:</strong></p>
+    <p>{{ message }}</p>
+</div>
