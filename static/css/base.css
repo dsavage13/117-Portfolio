@@ -27,7 +27,10 @@ html {
     font: 14px;
     color: var(--surface-color);
     scroll-behavior: smooth;
-    background-color: var(--background-color);
+    background: #1f4037;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, var(--neutral-color), var(--primary-color));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, var(--neutral-color), var(--primary-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
@@ -74,6 +77,11 @@ p{
     border-radius: 7px;
 }
 
+.main-container{
+    height: 100%;
+    width: 100%;
+}
+
 /* Project Section */
 
 .project-section {
@@ -82,11 +90,12 @@ p{
     justify-content: center;
     align-items: stretch;
     padding: 20px;
-    background-color: var(--neutral-color);
+    /* background-color: var(--neutral-color); */
+    margin-top: 20px;
 }
 
 .project-container {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -147,6 +156,11 @@ p{
 }
 
 /* Contact Form */
+
+.contact{
+    margin-top: 20px;
+}
+
 .contact-form-container {
     background-color: var(--primary-color);
     border: 1px solid #ddd;
@@ -189,4 +203,81 @@ p{
 
 .contact-form-container button:hover {
     background-color: darken(var(--secondary-color), 50%);
+}
+
+/* Add Project Form */
+
+.add-project-form-container {
+    background-color: var(--primary-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    margin: 16px;
+    padding: 16px;
+    width: 100%;
+    max-width: 600px; /* Adjust the max-width as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+.add-project-form-container h1 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: center;
+    color: var(--surface-color);
+}
+
+.add-project-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-project-form-container label {
+    margin-bottom: 8px;
+    color: var(--surface-color);
+}
+
+.add-project-form-container input,
+.add-project-form-container textarea,
+.add-project-form-container select {
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.add-project-form-container button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--surface-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--surface-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.btn:hover {
+    text-decoration: underline;
+}
+
+.add-project{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 100px;
+    width: 90%;
+    /* background-color: var(--background-color); */
 }

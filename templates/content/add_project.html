@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="add-project center-column">
+        <h1>Add Project</h1>
+        <form method="POST" enctype="multipart/form-data" class="add-project-form-container center-column">
+            {% csrf_token %}
+            {{ form.title }}
+            {{ form.description }}
+            {{ form.repository }}
+            {{ form.image }}
+            {{ form.skill }}
+            
+            <div class="controls">
+                <button type="reset">Reset</button>
+                <button type="submit">Add Project</button>
+            </div>
+            
+        </form>
+    </section>
+{% endblock content %}

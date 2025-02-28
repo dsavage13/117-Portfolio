@@ -1,6 +1,6 @@
 
 header{
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     height: 60px;
     position: sticky;
     top: 0px;

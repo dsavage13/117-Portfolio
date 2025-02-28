@@ -3,6 +3,13 @@
 
 {% block content %}
     <section class="project-list center-column">
+
+        {% if user.is_authenticated %}
+            <div class="add-project">
+                <a href="{% url 'add' %}" class="btn">Add Project</a>
+            </div>
+        {% endif %}
+
         <!-- Projects Section -->
         <h2>Recent Projects</h2>
         <p>Here are some of the recent projects that I have enjoyed creating. Click on each project to view more details.</p>
